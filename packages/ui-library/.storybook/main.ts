@@ -6,9 +6,13 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
   ],
-  framework: '@storybook/react',
+  framework: {
+    name: '@storybook/react',
+    options: {},
+  },
   core: {
     disableTelemetry: true,
+    builder: 'webpack5',
   },
 };
 
