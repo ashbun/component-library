@@ -35,3 +35,4 @@ coverage/
 # Package lock files (managed by workspaces)
 package-lock.json
 yarn.lock
+.vercel
