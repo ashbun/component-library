@@ -9,9 +9,9 @@
   ],
   "scripts": {
     "dev": "cd packages/showcase && pnpm run dev",
-    "build": "cd packages/design-tokens && pnpm run build && cd ../ui-library && pnpm run build && cd ../showcase && pnpm run build",
-    "lint": "cd packages/design-tokens && pnpm run lint && cd ../ui-library && pnpm run lint",
-    "type-check": "cd packages/design-tokens && pnpm run type-check && cd ../ui-library && pnpm run type-check",
+    "build": "cd packages/showcase && pnpm run build",
+    "lint": "cd packages/ui-library && pnpm run lint",
+    "type-check": "cd packages/ui-library && pnpm run type-check",
     "sync-tokens": "cd packages/design-tokens && pnpm run sync-figma-tokens"
   },
   "devDependencies": {
