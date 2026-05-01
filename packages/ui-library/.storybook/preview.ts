@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-// CSS will be loaded via webpack config
+import '../src/styles/globals.css';
 
 const preview: Preview = {
   parameters: {
