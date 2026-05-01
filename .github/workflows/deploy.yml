@@ -32,6 +32,6 @@ jobs:
         run: |
           npx vercel@latest --prod \
             --token ${{ secrets.VERCEL_TOKEN }} \
-            --org-id ${{ secrets.VERCEL_ORG_ID }} \
-            --project-id ${{ secrets.VERCEL_PROJECT_ID }}
+            --scope ${{ secrets.VERCEL_ORG_ID }} \
+            --projectId ${{ secrets.VERCEL_PROJECT_ID }}
         working-directory: ./packages/showcase
