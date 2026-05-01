@@ -8,9 +8,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "cd packages/ui-library && pnpm run dev",
-    "build": "pnpm --filter packages/design-tokens run build && pnpm --filter packages/ui-library run build",
-    "build:storybook": "cd packages/ui-library && pnpm run build:storybook",
+    "dev": "cd packages/showcase && pnpm run dev",
+    "build": "pnpm --filter packages/design-tokens run build && pnpm --filter packages/ui-library run build && pnpm --filter packages/showcase run build",
     "lint": "pnpm --filter packages/design-tokens run lint && pnpm --filter packages/ui-library run lint",
     "type-check": "pnpm --filter packages/design-tokens run type-check && pnpm --filter packages/ui-library run type-check",
     "sync-tokens": "pnpm --filter packages/design-tokens run sync-figma-tokens"

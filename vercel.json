@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run build:storybook",
-  "outputDirectory": "packages/ui-library/storybook-static",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "packages/showcase/dist",
   "installCommand": "pnpm install",
   "env": {
     "NODE_ENV": "production"
