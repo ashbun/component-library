@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:storybook",
+  "outputDirectory": "packages/ui-library/storybook-static",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/docs/introduction--page"
+    }
+  ]
+}

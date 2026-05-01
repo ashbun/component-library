@@ -1,0 +1,28 @@
+{
+  "name": "cc-component-library-monorepo",
+  "version": "1.0.0",
+  "description": "Component library platform for CC ecommerce - Geist-inspired design system",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "cd packages/ui-library && npm run dev",
+    "build": "npm run build -w packages/design-tokens && npm run build -w packages/ui-library",
+    "build:storybook": "cd packages/ui-library && npm run build:storybook",
+    "lint": "npm run lint -w packages/design-tokens && npm run lint -w packages/ui-library",
+    "type-check": "npm run type-check -w packages/design-tokens && npm run type-check -w packages/ui-library",
+    "sync-tokens": "npm run sync-figma-tokens -w packages/design-tokens"
+  },
+  "devDependencies": {
+    "@storybook/react": "^8.0.0",
+    "typescript": "~6.0.2"
+  },
+  "keywords": [
+    "component-library",
+    "design-system",
+    "react",
+    "geist"
+  ]
+}

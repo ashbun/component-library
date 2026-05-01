@@ -1,0 +1,24 @@
+{
+  "name": "Design Tokens",
+  "collections": {
+    "Base": {
+      "modes": {
+        "Mode 1": [
+          "Base.Mode 1.tokens.json"
+        ]
+      }
+    },
+    "Semantic": {
+      "modes": {
+        "Value": [
+          "Semantic.Value.tokens.json"
+        ]
+      }
+    }
+  },
+  "styles": {
+    "text": [
+      "text.styles.tokens.json"
+    ]
+  }
+}
