@@ -9,10 +9,10 @@
   ],
   "scripts": {
     "dev": "cd packages/showcase && pnpm run dev",
-    "build": "pnpm --filter packages/design-tokens run build && pnpm --filter packages/ui-library run build && pnpm --filter packages/showcase run build",
-    "lint": "pnpm --filter packages/design-tokens run lint && pnpm --filter packages/ui-library run lint",
-    "type-check": "pnpm --filter packages/design-tokens run type-check && pnpm --filter packages/ui-library run type-check",
-    "sync-tokens": "pnpm --filter packages/design-tokens run sync-figma-tokens"
+    "build": "cd packages/design-tokens && pnpm run build && cd ../ui-library && pnpm run build && cd ../showcase && pnpm run build",
+    "lint": "cd packages/design-tokens && pnpm run lint && cd ../ui-library && pnpm run lint",
+    "type-check": "cd packages/design-tokens && pnpm run type-check && cd ../ui-library && pnpm run type-check",
+    "sync-tokens": "cd packages/design-tokens && pnpm run sync-figma-tokens"
   },
   "devDependencies": {
     "@storybook/react": "^8.0.0",
