@@ -29,21 +29,9 @@ jobs:
         run: pnpm run build
 
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v26
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: ./packages/showcase
-
-      - name: Comment on PR
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '🚀 Storybook deployed! Check it out: https://component-library-${{ github.sha }}.vercel.app'
-            })
+        run: |
+          npx vercel@latest --prod \
+            --token ${{ secrets.VERCEL_TOKEN }} \
+            --org-id ${{ secrets.VERCEL_ORG_ID }} \
+            --project-id ${{ secrets.VERCEL_PROJECT_ID }}
+        working-directory: ./packages/showcase
