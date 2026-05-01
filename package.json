@@ -8,12 +8,12 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "cd packages/ui-library && npm run dev",
-    "build": "npm run build -w packages/design-tokens && npm run build -w packages/ui-library",
-    "build:storybook": "cd packages/ui-library && npm run build:storybook",
-    "lint": "npm run lint -w packages/design-tokens && npm run lint -w packages/ui-library",
-    "type-check": "npm run type-check -w packages/design-tokens && npm run type-check -w packages/ui-library",
-    "sync-tokens": "npm run sync-figma-tokens -w packages/design-tokens"
+    "dev": "cd packages/ui-library && pnpm run dev",
+    "build": "pnpm --filter packages/design-tokens run build && pnpm --filter packages/ui-library run build",
+    "build:storybook": "cd packages/ui-library && pnpm run build:storybook",
+    "lint": "pnpm --filter packages/design-tokens run lint && pnpm --filter packages/ui-library run lint",
+    "type-check": "pnpm --filter packages/design-tokens run type-check && pnpm --filter packages/ui-library run type-check",
+    "sync-tokens": "pnpm --filter packages/design-tokens run sync-figma-tokens"
   },
   "devDependencies": {
     "@storybook/react": "^8.0.0",
